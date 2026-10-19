@@ -9,12 +9,13 @@
 #   keytool -genkeypair -v -storetype PKCS12 -keystore dualaudio-release.jks \
 #     -alias dualaudio -keyalg RSA -keysize 4096 -validity 10000
 #
-# Repository secrets (Settings → Secrets and variables → Actions):
+# Secrets of the 'release' environment (Settings → Environments → release), which is limited
+# to v* tags:
 #
-#   base64 -i dualaudio-release.jks | gh secret set DUALAUDIO_KEYSTORE_BASE64
-#   gh secret set DUALAUDIO_KEYSTORE_PASSWORD
-#   gh secret set DUALAUDIO_KEY_ALIAS --body dualaudio
-#   gh secret set DUALAUDIO_KEY_PASSWORD        # PKCS12: same as the keystore password
+#   base64 -i dualaudio-release.jks | gh secret set DUALAUDIO_KEYSTORE_BASE64 --env release
+#   gh secret set DUALAUDIO_KEYSTORE_PASSWORD --env release
+#   gh secret set DUALAUDIO_KEY_ALIAS --env release --body dualaudio
+#   gh secret set DUALAUDIO_KEY_PASSWORD --env release   # PKCS12: same as the keystore password
 #
 # Publishing
 # ----------
@@ -36,6 +37,8 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-24.04
+    # Signing secrets live in the 'release' environment, which only accepts v* tags
+    environment: release
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

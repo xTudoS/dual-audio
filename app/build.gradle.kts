@@ -12,7 +12,7 @@ android {
         applicationId = "com.byxnd.dualaudio"
         minSdk = 34
         targetSdk = 37
-        versionCode = 2
+        versionCode = 3
         // The release workflow passes the git tag (v1.2.3 -> 1.2.3)
         versionName = providers.environmentVariable("DUALAUDIO_VERSION_NAME").orElse("1.0").get()
 
