@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Audio policy dumps: contain device MAC addresses, names and installed-app UIDs
+/dump.txt
+/audio.txt
+*.dumpsys.txt
+
+# Signing keys: kept in GitHub Secrets, never in the repo
+*.jks
+*.keystore
+
+# adb CLI build output (also holds after-set.txt dumps)
+/tools/audio-dup/build/

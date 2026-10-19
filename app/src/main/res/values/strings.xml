@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Dual Audio</string>
+    <string name="btn_permission">Grant Shizuku access</string>
+    <string name="btn_enable">Enable USB + Bluetooth</string>
+    <string name="btn_disable">Disable (normal routing)</string>
+    <string name="btn_refresh">Refresh status</string>
+    <string name="shizuku_not_running">Shizuku isn\'t running. Open the Shizuku app and tap Start.</string>
+    <string name="shizuku_no_permission">Shizuku is running, but Dual Audio doesn\'t have permission yet.</string>
+    <string name="shizuku_connecting">Shizuku OK. Connecting to the routing service…</string>
+    <string name="shizuku_ready">Ready. Routing service is running as shell.</string>
+    <string name="shizuku_too_old">Shizuku is too old; please update the Shizuku app.</string>
+    <string name="legal_notice">Copyright (C) 2026 xTudoS. Free software under the GNU GPL v3.0 or later; it comes with ABSOLUTELY NO WARRANTY. You may redistribute it under those terms.</string>
+    <string name="btn_licenses">Open-source licenses</string>
+    <string name="licenses_title">Open-source licenses</string>
+    <string name="license_app">Dual Audio (GPL-3.0-or-later)</string>
+    <string name="license_third_party">Third-party libraries</string>
+</resources>
